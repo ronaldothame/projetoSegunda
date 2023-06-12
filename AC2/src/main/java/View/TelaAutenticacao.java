@@ -209,7 +209,6 @@ public class TelaAutenticacao extends javax.swing.JFrame {
     private void btm_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm_cadastroActionPerformed
         CadastroUsuario cadastroUsuario = new CadastroUsuario();
                 cadastroUsuario.setVisible(true);
-
     }//GEN-LAST:event_btm_cadastroActionPerformed
 
     private void btm_acessoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm_acessoActionPerformed

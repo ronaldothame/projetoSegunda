@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Votogames
@@ -27,72 +29,148 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         lbl_sejaBemVindo = new javax.swing.JLabel();
-        btm_Fornecedores = new javax.swing.JButton();
-        btm_Usuarios = new javax.swing.JButton();
+        lbl_sejaBemVindo1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu_Novo = new javax.swing.JMenu();
+        jMenu_Novo_Produto = new javax.swing.JMenuItem();
+        jMenu_Novo_Compra = new javax.swing.JMenuItem();
+        jMenu_Novo_Sair = new javax.swing.JMenuItem();
+        jMenu_Gerenciar = new javax.swing.JMenu();
+        jMenu_Gerenciar_Fornecedores = new javax.swing.JMenuItem();
+        jMenu_Gerenciar_Funcionarios = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lbl_sejaBemVindo.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        lbl_sejaBemVindo.setForeground(new java.awt.Color(102, 255, 102));
         lbl_sejaBemVindo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lbl_sejaBemVindo.setText("VOCÊ DESEJA IR PARA O MENU DE:");
+        lbl_sejaBemVindo.setText("Meroy Lernin");
 
-        btm_Fornecedores.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        btm_Fornecedores.setText("FORNECEDORES");
-        btm_Fornecedores.addActionListener(new java.awt.event.ActionListener() {
+        lbl_sejaBemVindo1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        lbl_sejaBemVindo1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbl_sejaBemVindo1.setText("Seja bem vindo!");
+
+        jMenu_Novo.setText("Arquivo");
+        jMenu_Novo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btm_FornecedoresActionPerformed(evt);
+                jMenu_NovoActionPerformed(evt);
             }
         });
 
-        btm_Usuarios.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        btm_Usuarios.setText("USUÁRIOS");
-        btm_Usuarios.addActionListener(new java.awt.event.ActionListener() {
+        jMenu_Novo_Produto.setText("Novo Produto...");
+        jMenu_Novo_Produto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btm_UsuariosActionPerformed(evt);
+                jMenu_Novo_ProdutoActionPerformed(evt);
             }
         });
+        jMenu_Novo.add(jMenu_Novo_Produto);
+
+        jMenu_Novo_Compra.setText("Nova Compra...");
+        jMenu_Novo_Compra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_Novo_CompraActionPerformed(evt);
+            }
+        });
+        jMenu_Novo.add(jMenu_Novo_Compra);
+
+        jMenu_Novo_Sair.setText("Logoff");
+        jMenu_Novo_Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_Novo_SairActionPerformed(evt);
+            }
+        });
+        jMenu_Novo.add(jMenu_Novo_Sair);
+
+        jMenuBar1.add(jMenu_Novo);
+
+        jMenu_Gerenciar.setText("Gerenciar");
+
+        jMenu_Gerenciar_Fornecedores.setText("Gerenciar Fornecedores...");
+        jMenu_Gerenciar_Fornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_Gerenciar_FornecedoresActionPerformed(evt);
+            }
+        });
+        jMenu_Gerenciar.add(jMenu_Gerenciar_Fornecedores);
+
+        jMenu_Gerenciar_Funcionarios.setText("Gerenciar Funcionários...");
+        jMenu_Gerenciar_Funcionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_Gerenciar_FuncionariosActionPerformed(evt);
+            }
+        });
+        jMenu_Gerenciar.add(jMenu_Gerenciar_Funcionarios);
+
+        jMenuBar1.add(jMenu_Gerenciar);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(103, 103, 103)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(236, Short.MAX_VALUE)
                 .addComponent(lbl_sejaBemVindo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btm_Fornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addComponent(btm_Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(208, 208, 208))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(224, Short.MAX_VALUE)
+                    .addComponent(lbl_sejaBemVindo1)
+                    .addGap(194, 194, 194)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addComponent(lbl_sejaBemVindo)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btm_Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btm_Fornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(71, 71, 71))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(69, 69, 69)
+                    .addComponent(lbl_sejaBemVindo1)
+                    .addContainerGap(93, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btm_FornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm_FornecedoresActionPerformed
-        HomeFornecedor homeFornecedor = new HomeFornecedor();
-        homeFornecedor.setVisible(true);
+    private void jMenu_Novo_ProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_Novo_ProdutoActionPerformed
+        HomeProduto homeProduto = new HomeProduto();
+        homeProduto.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btm_FornecedoresActionPerformed
+    }//GEN-LAST:event_jMenu_Novo_ProdutoActionPerformed
+   
+    private void jMenu_Novo_CompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_Novo_CompraActionPerformed
+     HomeCompra homeCompra = new HomeCompra();
+        homeCompra.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenu_Novo_CompraActionPerformed
 
-    private void btm_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btm_UsuariosActionPerformed
+    private void jMenu_NovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_NovoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu_NovoActionPerformed
+
+    private void jMenu_Novo_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_Novo_SairActionPerformed
+        TelaAutenticacao telaAutenticacao = new TelaAutenticacao();
+        int sair = JOptionPane.showConfirmDialog(this, "Fazer logoff?", "", 2);
+        if (sair == 0) {
+            telaAutenticacao.setVisible(true);
+        dispose();
+        }
+    }//GEN-LAST:event_jMenu_Novo_SairActionPerformed
+
+    private void jMenu_Gerenciar_FuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_Gerenciar_FuncionariosActionPerformed
         HomeUsuario homeUsuario = new HomeUsuario();
         homeUsuario.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btm_UsuariosActionPerformed
+    }//GEN-LAST:event_jMenu_Gerenciar_FuncionariosActionPerformed
+
+    private void jMenu_Gerenciar_FornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_Gerenciar_FornecedoresActionPerformed
+        HomeFornecedor homeFornecedor = new HomeFornecedor();
+        homeFornecedor.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenu_Gerenciar_FornecedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,8 +209,15 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btm_Fornecedores;
-    private javax.swing.JButton btm_Usuarios;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenu_Gerenciar;
+    private javax.swing.JMenuItem jMenu_Gerenciar_Fornecedores;
+    private javax.swing.JMenuItem jMenu_Gerenciar_Funcionarios;
+    private javax.swing.JMenu jMenu_Novo;
+    private javax.swing.JMenuItem jMenu_Novo_Compra;
+    private javax.swing.JMenuItem jMenu_Novo_Produto;
+    private javax.swing.JMenuItem jMenu_Novo_Sair;
     private javax.swing.JLabel lbl_sejaBemVindo;
+    private javax.swing.JLabel lbl_sejaBemVindo1;
     // End of variables declaration//GEN-END:variables
 }
